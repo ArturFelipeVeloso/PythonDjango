@@ -1,0 +1,21 @@
+<h1>Bem-vindo ao blog</h1>
+
+{{Name}}
+
+<ol>
+{% for area in areas %}
+    {% if area == 'Django' %}
+        <li><b>{{area}}</b></li>
+    {% else %}
+        <li>{{area}}</li>
+    {% endif %}
+{% endfor %}
+</ol>
+
+<ul>
+{% for post in posts %}
+    <h2>{{post.title}}</h2>
+    <h3>{{post.title}}</h3>
+    <h4>{{post.title}}</h4>
+{% endfor %}
+</ul>

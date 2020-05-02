@@ -1,0 +1,2 @@
+awsgi é assícrono, é bem mais veloz que o wsgi. Então teremos essas 2 possibilidades para subrir o servidor.
+
