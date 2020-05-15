@@ -1,0 +1,21 @@
+<h1>Bem-vindo ao blog</h1>
+
+{{ Nome }}
+
+<ol>
+    {% for area in Areas %}
+        {% if area == 'JS' %}
+            <li><b>{{ area }}</b></li>
+        {% else %}
+            <li>{{ area }}</li>
+        {% endif %}
+    {% endfor %}
+</ol>
+
+<ol>
+    {% for post in Posts %}
+        <li>{{ post.title }}</li>
+        <li>{{ post.sub_title }}</li>
+        <li>{{ post.texto }}</li>
+    {% endfor %}
+</ol>

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Contatos{% endblock %}
+{% block url %}{% url 'postagens'%}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body">
+        <p class="text-white m-0">Contatos</p>
+        <p class="text-white m-0">Em caso de dúvidas, sugestões e network, entre em contatos conosco por meio de nossas redes sociais ou nos envie um email</p>
+      </div>
+    </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mb-5">
+        <form>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Qual a categoria?</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Arduino</option>
+              <option>Python</option>
+              <option>Django</option>
+              <option>Android</option>
+              <option>React</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Texto</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

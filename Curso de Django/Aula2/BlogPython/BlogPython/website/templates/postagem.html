@@ -1,0 +1,38 @@
+{% extends 'base_post.html' %}
+
+{% block title %}Postagem{% endblock %}
+
+{% block url %}{% url 'postagens'%}{% endblock %}
+
+{% block postagem %}
+  <!-- Title -->
+  <h1 class="mt-4">{{ Post.title }}</h1>
+
+  <p class="lead">
+    {{ Post.sub_title }}
+  </p>
+
+  <hr>
+
+  <!-- Preview Image -->
+  <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+
+  <hr>
+
+  <!-- Post Content -->
+  <p class="lead">{{ Post.content }}</p>
+  <hr>
+
+  <!-- Comments Form -->
+  <div class="card my-4">
+      <h5 class="card-header">Comentários:</h5>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
