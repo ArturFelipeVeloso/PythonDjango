@@ -16,3 +16,12 @@ def hello_blog(request):
 	}
 
 	return render(request, 'index.html', dados)
+
+def post_detalhes(request, id):
+	post = Post.objects.get(id=id)
+
+	data = {
+		'Postagem': post
+	}
+
+	return render(request, 'postagem.html', data)
