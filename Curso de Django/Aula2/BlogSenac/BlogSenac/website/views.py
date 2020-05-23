@@ -7,7 +7,8 @@ def hello_blog(request):
 		'Python', 'HTML', 'CSS', 'JS', 'PyCharm', 'Ruby'
 	]
 
-	ListaDePosts = Post.objects.all()
+	#ListaDePosts = Post.objects.all()
+	ListaDePosts = Post.objects.filter(ativado=True)
 
 	dados = {
 		'Nome' : 'Curso de Django',
@@ -25,3 +26,9 @@ def post_detalhes(request, id):
 	}
 
 	return render(request, 'postagem.html', data)
+
+def sobre(request):
+	return render(request, 'sobre.html')
+
+def contatos(request):
+	return render(request, 'contatos.html')

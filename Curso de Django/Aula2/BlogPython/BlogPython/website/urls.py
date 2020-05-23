@@ -6,4 +6,5 @@ urlpatterns = [
     path('post/<int:id>/', post_detalhes, name = 'post_detalhes'),
     path('sobre/', sobre, name = 'sobre'),
     path('contatos/', contatos, name = 'contatos'),
+    path('salvar-form/', contatos, name = 'contatos'),
 ]

@@ -15,7 +15,12 @@
   <hr>
 
   <!-- Preview Image -->
-  <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+
+  {% if Post.imagem %}
+    <img class="img-fluid rounded" src="{{ Post.imagem.url }}" width="900" height="300" alt="Card image cap">
+  {% else %}
+    <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="Card image cap">
+  {% endif %}
 
   <hr>
 
